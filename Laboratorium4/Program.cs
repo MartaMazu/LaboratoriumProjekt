@@ -5,7 +5,18 @@
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("");
+            try
+            {
+                var result = EquationSolver.Solve(1, -5, 6);
+                Console.WriteLine($"{nameof(result.Item1)}: {result.Item1}");
+                Console.WriteLine($"{nameof(result.Item2)}: {result.Item2}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+          
+            Console.ReadLine();
         }
     }
 }
